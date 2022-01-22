@@ -127,7 +127,8 @@ namespace iRacingProfilChanger
                 }
                 catch { }
 
-                Directory.Move(h.iRacingFolder, h.iRacingFolderBackup);
+                //Directory.Move(h.iRacingFolder, h.iRacingFolderBackup);
+                h.CopyFilesRecursively(h.iRacingFolder, h.iRacingFolderBackup);
                 h.CopyFilesRecursively(Path.Combine(h.iRacingProfileFolder, newProfile), h.iRacingFolder);                
                 h.createProfileFile(newProfile);
                 
