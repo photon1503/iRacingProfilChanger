@@ -108,18 +108,18 @@ namespace iRacingProfilChanger
             //check current Profile
             if (cbProfiles.FindStringExact(currentProfile) > 0)
             {                
-                dialogResult = MessageBox.Show("Save current profile?", "Save Profile?", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
+                //dialogResult = MessageBox.Show("Save current profile?", "Save Profile?", MessageBoxButtons.YesNo);
+                //if (dialogResult == DialogResult.Yes)
+                //{
                     h.CopyFilesRecursively(h.iRacingFolder, Path.Combine(h.iRacingProfileFolder, currentProfile));
-                }
+                //}
             }
 
             string newProfile = this.cbProfiles.SelectedItem.ToString();
             
-            dialogResult = MessageBox.Show("Change profile to " + newProfile +"?", "Set Profile?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
+            //dialogResult = MessageBox.Show("Change profile to " + newProfile +"?", "Set Profile?", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
                 //do something
                 try
                 {
@@ -135,7 +135,7 @@ namespace iRacingProfilChanger
 
                 updateProfiles();
                 getCurrentProfile();
-            }
+            //}
         }
     }
 }
