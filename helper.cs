@@ -27,6 +27,23 @@ namespace iRacingProfilChanger
             }
         }
 
+        public string getProfile()
+        {
+            string rc = null;
+
+            try
+            {
+                using (StreamReader sr = File.OpenText(iRacingProfileFile))
+                {
+                    rc = sr.ReadLine();
+                }
+            }
+            catch {}
+
+            return rc;
+        }
+
+
         public  void CopyFilesRecursively(string sourcePath, string targetPath)
         {
             //Now Create all of the directories
